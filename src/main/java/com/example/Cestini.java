@@ -12,9 +12,9 @@ public class Cestini extends Thread{
         return contatore;
 
     }
-    public void AggiungiDindolino(){
-
-        contatore++;
+    synchronized public void AggiungiDindolino(){
+        int appo= contatore + 1;
+        contatore= appo;
 
     }
 
